@@ -4,9 +4,35 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {createStore} from 'redux'
+import {Provider} from 'react-redux'
+
+const initialState = {
+  addition: 0,
+  subtraction: 0,
+  multiplication: 0,
+  division: 0,
+  pow: 0,
+  sqrt: 0,
+  hypot: 0
+}
+
+const store = createStore(function(state = initialState, action) {
+  switch (action.type) {
+    case "":
+      return {...state, }
+
+  }
+  
+  return state
+})
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
