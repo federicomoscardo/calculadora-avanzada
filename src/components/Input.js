@@ -2,6 +2,11 @@ import {useState} from 'react'
 
 function Input(props) {
     let [num, setNum] = useState(0)
+    
+    function clearInput() {
+        setNum(0)
+    }
+
 
     return (
         <div>
