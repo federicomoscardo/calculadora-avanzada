@@ -11,8 +11,6 @@ function Input(props) {
         props.dispatch({type: "SET_VALUE", payload: {value: e.target.value, inputNum: props.numInput}})
     }
 
-
-
     return (
         <div>
             <input type="number" 
@@ -27,9 +25,7 @@ function Input(props) {
 }
 
 function mapStateToProps(state) {
-    return {
 
-    }
 }
 
 export default connect(mapStateToProps)(Input)
