@@ -1,14 +1,21 @@
-import React, { Component } from 'react'
+import {connect} from 'react-redux'
 
-class Results extends Component {
-    
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
+function Results(props) {
+
+    return (
+        <div>
+            <p>Addition: {Number(props.input1) + Number(props.input2)} </p>
+            <p>Subtraction: {Number(props.input1) - Number(props.input2)} </p>
+            <p>Multiplication: {Number(props.input1) * Number(props.input2)} </p>
+        </div>
+    )
+}
+
+function mapStateToProps(state) {
+    return {
+        input1: state.input1,
+        input2: state.input2
     }
 }
 
-export default Results
+export default connect(mapStateToProps)(Results)
