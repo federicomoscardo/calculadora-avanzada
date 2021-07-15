@@ -10,9 +10,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="d-flex">
-          <Input numInput='1' value={this.props.input1}></Input>
-          <Input numInput='2' value={this.props.input2}></Input>
+        <div className="d-flex flex-column inputs">
+          <label>Imputs:</label>
+          <div className="d-flex">
+            <Input numInput='1' value={this.props.input1}></Input>
+            <Input numInput='2' value={this.props.input2}></Input>
+          </div>
         </div>
           <Results></Results>
       </div>
