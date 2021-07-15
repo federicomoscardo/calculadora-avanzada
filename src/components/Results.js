@@ -7,6 +7,7 @@ function Results(props) {
             <p>Addition: {Number(props.input1) + Number(props.input2)} </p>
             <p>Subtraction: {Number(props.input1) - Number(props.input2)} </p>
             <p>Multiplication: {Number(props.input1) * Number(props.input2)} </p>
+            <p>Division: {Number(props.input2) === 0 ? 0 : Number(props.input1) / Number(props.input2)} </p>
         </div>
     )
 }
