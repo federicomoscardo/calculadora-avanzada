@@ -8,20 +8,17 @@ import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 
 const initialState = {
-  addition: 0,
-  subtraction: 0,
-  multiplication: 0,
-  division: 0,
-  pow: 0,
-  sqrt: 0,
-  hypot: 0
+  input1:0,
+  input2:0
 }
 
 const store = createStore(function(state = initialState, action) {
   switch (action.type) {
-    case "":
-      return {...state, }
-
+    case "SET_VALUE":
+      if (action.payload.inputNum == '1') {
+        return {...state, input1: action.payload.value}
+      }
+      return {...state, input2: action.payload.value}
   }
   
   return state
