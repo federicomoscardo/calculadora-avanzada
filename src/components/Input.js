@@ -1,19 +1,29 @@
-import {useState} from 'react'
+
+import {connect} from 'react-redux'
 
 function Input(props) {
-    let [num, setNum] = useState(0)
     
     function clearInput() {
-        setNum(0)
+        props.dispatch({type: "SET_VALUE", payload: {value: 0, inputNum: props.numInput}})
     }
+
 
 
     return (
         <div>
-            <input type="number" onChange={setValue} value={num}></input>
+            <input type="number" 
+                onChange={setValue} 
+                value={props.value}
+            />
             <button onClick={clearInput}>Clear</button>
         </div>
     )
 }
 
-export default Input
+function mapStateToProps(state) {
+    return {
+
+    }
+}
+
+export default connect(mapStateToProps)(Input)
