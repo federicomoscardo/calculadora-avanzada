@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 function Results(props) {
 
     return (
-        <div>
+        <div className="d-flex flex-column mb">
             <p>Addition: {Number(props.input1) + Number(props.input2)} </p>
             <p>Subtraction: {Number(props.input1) - Number(props.input2)} </p>
             <p>Multiplication: {Number(props.input1) * Number(props.input2)} </p>
