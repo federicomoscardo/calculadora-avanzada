@@ -7,6 +7,10 @@ function Input(props) {
         props.dispatch({type: "SET_VALUE", payload: {value: 0, inputNum: props.numInput}})
     }
 
+    function setValue(e) {
+        props.dispatch({type: "SET_VALUE", payload: {value: e.target.value, inputNum: props.numInput}})
+    }
+
 
 
     return (
